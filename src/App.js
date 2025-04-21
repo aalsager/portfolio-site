@@ -1,27 +1,19 @@
 import React from 'react';
-import './App.css'; // This imports the CSS to style your page
+import './App.css';
+import profileImage from './Assets/ProfileImage.jpg'; // Ensure this path matches your image location
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* Replace this with your name and intro */}
-        <h1>Welcome to Abdulwahab Alsager's Portfolio</h1>
+    <div className="intro-container">
+      <div className="intro-image">
+        <img src={profileImage} alt="Your Name" />
+      </div>
+      <div className="intro-text">
+        <h1>Software Engineer, Data Enthusiast</h1>
         <p>
-          Hi, I'm Abdulwahab! I'm a Software Engineer with a passion for problem-solving and creating user-centric applications. This site is part of my path to continue learning, expanding my skills, and showcasing some of my interests and projects. I hope you find value in it. Thank you for visiting!
+        Hi, I'm Abdulwahab! I'm a Software Engineer with a passion for problem-solving, creating user-centric applications, and utilizing data to obtain actionable insights. This site is part of my path to continue learning, expanding my skills, and showcasing some of my interests and projects. I hope you find value in it. Thank you for visiting!
         </p>
-        <p>
-          Explore my work, including projects in React, Python, SQL, Tableau, and more!
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/aalsager"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check out my GitHub
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
