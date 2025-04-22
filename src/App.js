@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import ProfileImage from './Assets/ProfileImage.jpg';
-import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaSun, FaMoon, FaXTwitter } from 'react-icons/fa6';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
   return (
+    <div className={`app-container ${darkMode ? "dark-mode" : "light-mode"}`}>
+      {/* Toggle Button in Top-Right */}
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {darkMode ? <FaSun /> : <FaMoon />}
+      </button>
     <div className="intro-container">
       <div className="intro-image">
         <img src={ProfileImage} alt="Abdulwahab Alsager" className="profile-pic" />
@@ -34,7 +44,8 @@ function App() {
           </p>
         </div>
       </div>
-    </div> // Closing the outermost div here
+    </div>
+  </div>
   );
 }
 
